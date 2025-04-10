@@ -18,6 +18,15 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="index_files/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="https://hamserum.space/images/webclip.png" rel="apple-touch-icon">
+
+  <style>
+    #ContractBtn {
+      background-color: transparent;
+    }
+    #ContractBtn:hover {
+      background-color: #ffffff;
+    }
+  </style>
 <body>
   
   <section class="header-wrapper">
@@ -199,9 +208,9 @@
         </div> -->
         <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell"><img src="index_files/part2.png" loading="lazy" alt="" class="roadicon">
         </div>
-        <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell"><img src="index_files/part5.png" loading="lazy" alt="" class="roadicon">
+        <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell" onclick="openLink('https://dexscreener.com/solana/hfqb5vhllx5afoeckxqjfabkxb9avwi5ae9n1ttszrfg')"><img src="index_files/part5.png" loading="lazy" alt="" class="roadicon">
         </div>
-        <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell"><img src="index_files/part3.png" loading="lazy" alt="" class="roadicon">
+        <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell" onclick="openLink('https://www.dextools.io/app/en/token/onedollar')"><img src="index_files/part3.png" loading="lazy" alt="" class="roadicon">
         </div>
         <div data-wf-pbl="layout-grid-2x2-centered" id="w-node-_151009ec-db88-edd4-1793-b822078c508d-b39babc3" class="road-cell"><img src="index_files/part6.png" loading="lazy" alt="" class="roadicon">
         </div>
@@ -316,9 +325,9 @@
           <a class="footer-link w-inline-block w--current" href="#" target="_blank">
             <div>Chart</div>
           </a>
-          <a class="footer-link w-inline-block w--current" href="#" target="_blank">
-            <div>Contract</div>
-          </a>
+          <button id="ContractBtn" class="footer-link w-inline-block w--current" onclick="copyContractAddress()">
+            Contract
+          </button>
         </div>
         <div class="footer-social-wrapper">
           <div class="w-layout-grid header-logo-grid footer">
@@ -341,5 +350,21 @@
   <script src="index_files/645f539322b4d0ffb39babc6" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="index_files/webflow.js.indir" type="text/javascript"></script>
   <script src="index.html"></script>
+  <script>
+    function copyContractAddress() {
+      //DREaMGRTYr7CQeBUb88pj7xmBeaBByEdackvMG8j5aGX
+      const text = "DREaMGRTYr7CQeBUb88pj7xmBeaBByEdackvMG8j5aGX";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Contract Address copied to clipboard!");
+      }).catch(err => {
+        console.error("Error copying text: ", err);
+      });
+    }
+
+    function openLink(link) {
+    window.open(link, "_blank");
+  }
+
+  </script>
 
 </body></html>
